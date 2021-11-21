@@ -1,0 +1,28 @@
+<doc background-color="blue" name="REFERENCE 1: Temperature dashboard" description="Panel with temperature data">
+  <!--
+      This panel shows temperature, humidity and amount left in a tank, along with a message and a logo
+      Panel shows data from the provided topics:
+      
+      - temp/device/002
+      - temp/device/004
+      - temp/device/006
+  -->  
+  
+  <grid vertical-centered="true" margin-top="30px" >
+   
+    <!-- column with some information -->
+    <column>
+      <message transition="fade up" color="violet" icon="thermometer half" header="Average Temperature and Humidity" size="big" icon-border="circular" icon-color="violet" icon-size="medium" icon-inverted="true">
+      </message>
+      <image transition="fade up" centered="true" size="medium" src="https://myqtthub.com/assets/images/myqtthub-512x512.png" icon-inverted="false"></image>
+    </column>
+    
+    <!-- columns with temperatures -->
+    <column>
+      <stat transition="fade up" label='Temperature (avg)' topic='esp32/dht/temperature'  suffix='º' size='huge' icon='thermometer half' color='yellow' margin-bottom="13%"></stat>
+      <stat transition="fade down" label='Humidity (avg)' topic='esp32/dht/humidity' attr-name="humidity" suffix="%" size='huge' icon='umbrella' color='green' margin-bottom="13%"></stat>
+      <last-update transition="fly up" color="olive" size="huge"></last-update> <refresh-button transition="tada" size="huge" color="violet" icon="thermometer"></refresh-button>
+    </column>
+  </grid>
+  
+</doc>

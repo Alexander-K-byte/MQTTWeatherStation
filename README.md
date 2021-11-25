@@ -14,3 +14,7 @@ Create a weather station with Arduino/ESP32 clients, mqtt broker and web server 
 1. double total used by total += temp
 1. double avg calculated by total / i
 1. output avg to screen to 2 decimal places
+
+### Hosting on myqtthub.com
+Free service option available for mqtt services, web panels available to view json or XML, server allows pairing of devices and keeps a log of all received data.
+Esp32 configured with device name and login credentials for myqtthub.com, web panel updated with XML view to show our current avg temp and humidity values.

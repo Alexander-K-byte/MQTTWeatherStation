@@ -1,5 +1,5 @@
 # MQTTWeatherStation
-Create a weather station with Arduino/ESP32 clients, mqtt broker and web server api
+(In progress) Create a weather station with Arduino/ESP32 clients, mqtt broker and web server api
 
 ## REQUIREMENTS:
 * The clients (Esp32 or Arduino) constantly measure temperature and humidity in their environment.  They save the measurement data locally, and calculate a running average. The Client should make measurements for the average very often (for example, every 5-10 seconds).
